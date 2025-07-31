@@ -1,0 +1,37 @@
+  spring:
+    profiles:
+      active: local
+
+---
+# Profile: local
+spring:
+  config:
+    activate:
+      on-profile: local
+  application:
+    name: task-manager
+
+server:
+  port: 8081
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+
+---
+# Profile: docker
+spring:
+  config:
+    activate:
+      on-profile: docker
+  application:
+    name: task-manager
+
+server:
+  port: 8081
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka-server:8761/eureka
