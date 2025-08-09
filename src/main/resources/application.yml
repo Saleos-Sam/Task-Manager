@@ -1,6 +1,6 @@
-  spring:
-    profiles:
-      active: local
+spring:
+  profiles:
+    active: local
 
 ---
 # Profile: local
@@ -27,6 +27,11 @@ spring:
       on-profile: docker
   application:
     name: task-manager
+  datasource:
+    url: jdbc:postgresql://postgres:5432/taskdb
+    username: taskuser
+    password: taskpass
+    driver-class-name: org.postgresql.Driver
 
 server:
   port: 8081
