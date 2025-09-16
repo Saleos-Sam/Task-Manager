@@ -13,6 +13,8 @@ eureka:
   client:
     service-url:
       defaultZone: http://localhost:8761/eureka
+  instance:
+    prefer-ip-address: true
 
 ---
 # Profile: docker
@@ -23,7 +25,7 @@ spring:
   application:
     name: task-manager
   datasource:
-    url: jdbc:postgresql://postgres:5432/taskdb
+    url: jdbc:postgresql://task-manager-postgres:5432/taskdb
     username: taskuser
     password: taskpass
     driver-class-name: org.postgresql.Driver
