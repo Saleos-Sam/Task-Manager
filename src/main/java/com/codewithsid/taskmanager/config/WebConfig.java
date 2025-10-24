@@ -1,4 +1,4 @@
-package com.codewithsam.taskmanager.config;
+package com.codewithsid.taskmanager.config;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;

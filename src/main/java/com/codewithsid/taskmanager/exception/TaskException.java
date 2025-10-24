@@ -1,4 +1,4 @@
-package com.codewithsam.taskmanager.exception;
+package com.codewithsid.taskmanager.exception;
 
 import lombok.Getter;
 import org.springframework.http.HttpStatus;

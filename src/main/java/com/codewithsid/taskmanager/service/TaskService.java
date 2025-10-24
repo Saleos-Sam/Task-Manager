@@ -1,9 +1,9 @@
-package com.codewithsam.taskmanager.service;
+package com.codewithsid.taskmanager.service;
 
-import com.codewithsam.taskmanager.model.Task;
-import com.codewithsam.taskmanager.exception.TaskException;
-import com.codewithsam.taskmanager.repository.TaskRepository;
-import com.codewithsam.taskmanager.specification.TaskSpecification;
+import com.codewithsid.taskmanager.model.Task;
+import com.codewithsid.taskmanager.exception.TaskException;
+import com.codewithsid.taskmanager.repository.TaskRepository;
+import com.codewithsid.taskmanager.specification.TaskSpecification;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.Page;

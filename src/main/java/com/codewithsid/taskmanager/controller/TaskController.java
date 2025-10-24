@@ -1,6 +1,6 @@
-package com.codewithsam.taskmanager.controller;
+package com.codewithsid.taskmanager.controller;
 
-import com.codewithsam.taskmanager.service.TaskService;
+import com.codewithsid.taskmanager.service.TaskService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
@@ -11,8 +11,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.format.annotation.DateTimeFormat;
-import com.codewithsam.taskmanager.model.Task;
-import com.codewithsam.taskmanager.repository.TaskRepository;
+import com.codewithsid.taskmanager.model.Task;
+import com.codewithsid.taskmanager.repository.TaskRepository;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;

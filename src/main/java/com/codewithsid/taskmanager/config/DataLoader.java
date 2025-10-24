@@ -1,7 +1,7 @@
-package com.codewithsam.taskmanager.config;
+package com.codewithsid.taskmanager.config;
 
-import com.codewithsam.taskmanager.model.Task;
-import com.codewithsam.taskmanager.repository.TaskRepository;
+import com.codewithsid.taskmanager.model.Task;
+import com.codewithsid.taskmanager.repository.TaskRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.CommandLineRunner;

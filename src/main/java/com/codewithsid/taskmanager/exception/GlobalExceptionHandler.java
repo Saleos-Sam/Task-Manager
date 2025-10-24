@@ -1,4 +1,4 @@
-package com.codewithsam.taskmanager.exception;
+package com.codewithsid.taskmanager.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

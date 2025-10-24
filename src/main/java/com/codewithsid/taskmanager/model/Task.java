@@ -1,4 +1,4 @@
-package com.codewithsam.taskmanager.model;
+package com.codewithsid.taskmanager.model;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.*;
 import lombok.Data;

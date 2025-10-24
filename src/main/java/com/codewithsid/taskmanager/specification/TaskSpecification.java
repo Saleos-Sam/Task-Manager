@@ -1,6 +1,6 @@
-package com.codewithsam.taskmanager.specification;
+package com.codewithsid.taskmanager.specification;
 
-import com.codewithsam.taskmanager.model.Task;
+import com.codewithsid.taskmanager.model.Task;
 import jakarta.persistence.criteria.*;
 import org.springframework.data.jpa.domain.Specification;
 import java.time.LocalDate;
@@ -79,6 +79,15 @@ public class TaskSpecification {
                 cb.and(
                     cb.lessThan(root.get("dueDate"), LocalDate.now()),
                     cb.not(root.get("status").in(Task.TaskStatus.COMPLETED, Task.TaskStatus.CANCELLED))
+                );
+    }
+
+
+    public static Specification<Task> isOverdueNew(){
+        return (Root<Task> root, CriteriaQuery<?> query, CriteriaBuilder cb) ->
+                cb.and(
+                        cb.lessThanOrEqualTo(root.get("dueDate"),LocalDate.now()),
+                        cb.not(root.get("status").in(Task.TaskStatus.COMPLETED,Task.TaskStatus.CANCELLED))
                 );
     }
 

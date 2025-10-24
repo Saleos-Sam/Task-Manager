@@ -1,4 +1,4 @@
-package com.codewithsam.taskmanager.exception;
+package com.codewithsid.taskmanager.exception;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.AllArgsConstructor;
