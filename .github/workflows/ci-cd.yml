@@ -1,4 +1,4 @@
-name: CI/CD Pipeline
+name: API CI/CD Pipeline
 
 on:
   push:
@@ -11,8 +11,7 @@ on:
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: ${{ github.repository }}
-  KUBERNETES_NAMESPACE: task-manager
+  IMAGE_NAME: saleos-sam/task-manager-api
 
 jobs:
   build-and-push:
@@ -39,14 +38,10 @@ jobs:
         restore-keys: ${{ runner.os }}-m2
 
     - name: Run tests
-      run: |
-        cd Task-Manager-Springboot
-        mvn clean test
+      run: mvn clean test
 
     - name: Build application
-      run: |
-        cd Task-Manager-Springboot
-        mvn clean package -DskipTests
+      run: mvn clean package -DskipTests
 
     - name: Set up Docker Buildx
       uses: docker/setup-buildx-action@v3
