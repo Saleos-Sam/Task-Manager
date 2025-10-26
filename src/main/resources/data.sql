@@ -1,7 +1,7 @@
--- Task Manager Sample Data Population Script for H2 Database
--- This script populates the H2 in-memory database with comprehensive sample data
+-- Task Manager Sample Data Population Script
+-- This script populates the database with comprehensive sample data
 -- 
--- ✅ H2-compatible date functions
+-- ✅ PostgreSQL-compatible date functions using INTERVAL
 -- ✅ Creates realistic scenarios with overdue, current, and future tasks
 -- ✅ Works with Spring Boot's automatic data.sql execution
 --
@@ -12,7 +12,7 @@
 -- - Completed tasks (with proper completion dates)
 
 -- Insert sample tasks with various statuses, priorities, and categories
--- Using H2's DATEADD function instead of PostgreSQL's INTERVAL
+-- Using PostgreSQL's INTERVAL syntax (also works with H2 when using PostgreSQL mode)
 
 -- Development Tasks
 INSERT INTO tasks (title, description, due_date, status, priority, category, assigned_to, estimated_hours, created_by, created_at, updated_at, completion_date) VALUES

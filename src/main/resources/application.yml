@@ -3,6 +3,9 @@ spring:
   config:
     activate:
       on-profile: local
+  sql:
+    init:
+      mode: always
   application:
     name: task-manager
 
@@ -24,6 +27,9 @@ spring:
       on-profile: docker
   application:
     name: task-manager
+  sql:
+    init:
+      mode: never
   datasource:
     url: jdbc:postgresql://task-manager-postgres:5432/taskdb
     username: taskuser
@@ -32,7 +38,6 @@ spring:
 
 server:
   port: 8081
-
 
 eureka:
   client:
